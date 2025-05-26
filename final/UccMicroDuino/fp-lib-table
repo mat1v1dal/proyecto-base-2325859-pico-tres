@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "embeddedPcbUsb")(type "KiCad")(uri "${KIPRJMOD}/uccMicroDuino SMD -20240318/PCBnew/Footprint Libraries/embeddedPcbUsb.pretty")(options "")(descr ""))
+  (lib (name "ledSmd")(type "KiCad")(uri "${KIPRJMOD}/uccMicroDuino SMD -20240318/PCBnew/Footprint Libraries/ledSmd.pretty")(options "")(descr ""))
+)
