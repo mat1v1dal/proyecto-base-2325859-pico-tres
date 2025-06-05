@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="sistema.js"></script>
+</head>
+<body>
+    <div id="inter2">
+        <h2>Sistema de Registro</h2>
+        <p>Nombre <input type="text" name="Nombre" placeholder="Indique Nombre"> </p>
+        <p>Apellido <input type="text" name="Apellido" placeholder="Indique Apellido"></p>
+        <p>DNI <input type="number" name="DNI" placeholder="Indique su DNI"></p>
+        <br>
+        <button class="boton">AFILIAR</button>
+    </div>
+    <br>
+
+    <br>
+
+ 
+    <h2>Elegí cómo te sentís y te recomiendo una canción:</h2>
+    <div class="botones"style="margin-top: 20px; text-align: center;">
+    <button onclick="recomendar('feliz')">😊 Feliz</button>
+    <button onclick="recomendar('triste')">😢 Triste</button>
+    <button onclick="recomendar('motivado')">🔥 Motivado</button>
+    <button onclick="recomendar('relajado')">😌 Relajado</button>
+    
+  </div>
+  <div id="recomendaciones" ></div>
+</body>
+</html>
