@@ -6,6 +6,24 @@ function suma(){
     document.getElementById("resultado").value=resultado;
 }
 
+function afiliar(){
+    let nombre=document.getElementById("Nombre").value;
+    let apellido=document.getElementById("Apellido").value;
+    let dni=document.getElementById("DNI").value;
+
+
+    if (nombre=="" || apellido=="" || dni==""){
+        alert("Por favor, complete todos los campos.");
+        return;
+    }
+    if (dni.length != 8 || isNaN(dni) || dni < 0) {
+        alert("El DNI debe tener 8 dígitos numéricos y mayores a 0.");
+        return;
+    }
+
+    alert("¡Felicidades " + nombre + "! Te has afiliado correctamente.");
+}
+
 function validar(){
     let usuario=document.getElementById("Usuario").value;
     let clave=document.getElementById("Clave").value;

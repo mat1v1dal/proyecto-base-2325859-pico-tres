@@ -1,32 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sistema de Registro</title>
     <link rel="stylesheet" href="style.css">
     <script src="sistema.js"></script>
 </head>
 <body>
-    <div class="inter2">
-        <h2>Sistema de Registro</h2>
-        <p>Nombre <input type="text" name="Nombre" placeholder="Indique Nombre"> </p>
-        <p>Apellido <input type="text" name="Apellido" placeholder="Indique Apellido"></p>
-        <p>DNI <input type="number" name="DNI" placeholder="Indique su DNI"></p>
-        <br>
-        <button class="boton">AFILIAR</button>
+    <div class="container">
+        <header>
+            <h1>Sistema de Registro</h1>
+        </header>
+        
+        <main>
+            <section class="registro-card">
+                <h2>Datos Personales</h2>
+                <div class="form-group">
+                    <label for="Nombre">Nombre</label>
+                    <input type="text" id="Nombre" name="Nombre" placeholder="Ingrese su nombre">
+                </div>
+                
+                <div class="form-group">
+                    <label for="Apellido">Apellido</label>
+                    <input type="text" id="Apellido" name="Apellido" placeholder="Ingrese su apellido">
+                </div>
+                
+                <div class="form-group">
+                    <label for="DNI">DNI</label>
+                    <input type="number" id="DNI" name="DNI" placeholder="Ingrese su DNI">
+                </div>
+                
+                <button class="btn btn-primary" onclick="afiliar()">AFILIAR</button>
+            </section>
+            
+            <section class="recomendaciones-card">
+                <h2>Elegí cómo te sentís y nosotros hacemos el resto:</h2>
+                <div class="mood-buttons">
+                    <button class="btn btn-mood" onclick="recomendar('feliz')">😊 Feliz</button>
+                    <button class="btn btn-mood" onclick="recomendar('triste')">😢 Triste</button>
+                    <button class="btn btn-mood" onclick="recomendar('motivado')">🔥 Motivado</button>
+                    <button class="btn btn-mood" onclick="recomendar('relajado')">😌 Relajado</button>
+                </div>
+                <div id="recomendaciones" class="recomendaciones-resultado"></div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2025 Sistema de Registro</p>
+        </footer>
     </div>
-    <br>
-
-    <br>
-    <h2>Elegí cómo te sentís y nosotros hacemos el resto :</h2>
-    <div class="botones"style="margin-top: 20px; text-align: center;">
-    <button onclick="recomendar('feliz')">😊 Feliz</button>
-    <button onclick="recomendar('triste')">😢 Triste</button>
-    <button onclick="recomendar('motivado')">🔥 Motivado</button>
-    <button onclick="recomendar('relajado')">😌 Relajado</button>
-    
-</div>
-<div id="recomendaciones" ></div>
 </body>
 </html>

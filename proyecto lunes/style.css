@@ -1,72 +1,202 @@
 @font-face {
-
-
-    font-family: 'pagina' ;
-    src: url(Gotham-Bold.otf);
+  font-family: "Gotham";
+  src: url(Gotham-Bold.otf);
+  font-weight: bold;
+  font-style: normal;
 }
 
-h1,h2{
-    color:  #1ed760;
-    text-align: center;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.244);
-    font-family: 'pagina';
+:root {
+  --primary: #1ed760;
+  --primary-dark: #1ab352;
+  --dark: #121212;
+  --light: #ffffff;
+  --gray: #333333;
+  --light-gray: #f5f5f5;
+  --border-radius: 8px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
 }
 
-.login{
-    background-color: rgb(59, 60, 61);
-    font-family: 'pagina';
-}
-.inter{
-    background-color: grey;
-    border-radius: 80px;
-    margin: 20px auto;
-    width: 60%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    font-family: 'pagina';
-    text-align: center;
-    font-size: 20px;
-    padding-top: 100px;
-    height: 400px;
-}
-.boton{
-    font-size: 20px;
-    background-color:  #1ed760; 
-    color: white;
-    padding: 15px 32px;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 12px;
-    border: none;
-    font-family: 'pagina';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-
-.inter2{
-    font-family: 'pagina';
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    margin: 20px auto;
-    width: 80%;
-    padding: 20px;
-    background-color: rgb(59, 60, 61);
-    border-radius: 5px;
+body {
+  font-family: "Gotham", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: var(--light-gray);
+  min-height: 100vh;
 }
 
-.botones button {
-    width: auto;
-    margin: 10px;
-    padding: 15px;
-    background-color: #14045e;
-    border: none;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
-.botones button:hover {
-    background-color: #14045e;
+
+header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+h1,
+h2 {
+  color: var(--primary);
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+main {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.registro-card,
+.recomendaciones-card {
+  background-color: var(--light);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--gray);
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(30, 215, 96, 0.2);
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--light);
+  width: 100%;
+  padding: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.mood-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.btn-mood {
+  background-color: var(--gray);
+  color: var(--light);
+  min-width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.btn-mood:hover {
+  background-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.recomendaciones-resultado {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius);
+  min-height: 100px;
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.registro-card,
+.recomendaciones-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.registro-card {
+  animation-delay: 0.1s;
+}
+
+.recomendaciones-card {
+  animation-delay: 0.3s;
 }
